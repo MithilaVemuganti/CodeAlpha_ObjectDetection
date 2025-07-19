@@ -1,27 +1,39 @@
 # CodeAlpha_ObjectDetection
 
-#🎥 YOLOv8 Object Tracking Web App
+# 🎯 Real-Time Object Detection & Tracking Web App
 
-This Flask-based web application performs real-time object detection and tracking using the YOLOv8 model and Deep SORT tracking algorithm. Users can either upload a video or use their webcam to visualize tracked objects with unique IDs directly in their browser.
+This project is a Flask-based web application that performs real-time object detection and tracking using **YOLOv8** and **Deep SORT**. Users can either upload video files or stream directly from their webcam to detect and track multiple objects with persistent IDs.
 
-##🚀 Features
-Upload and process custom video files
+---
 
-Live object tracking through webcam
+## ✅ Key Features
 
-Object detection powered by Ultralytics YOLOv8
+- 🎥 **Video Upload or Live Webcam**  
+  Choose between uploading a local video or using your webcam for live tracking.
 
-Multi-object tracking using Deep SORT
+- 🧠 **YOLOv8-Powered Object Detection**  
+  Leverages Ultralytics’ YOLOv8 model for fast and accurate object recognition.
 
-Simple, responsive web interface built with Flask
+- 🔄 **Deep SORT for Multi-Object Tracking**  
+  Assigns consistent IDs to detected objects across frames for effective tracking.
 
-##🧠 Tech Stack
-Flask – Web framework
+- 🌐 **Interactive Web Interface**  
+  Clean, browser-based UI built with Flask and Jinja2 templates.
 
-YOLOv8 (Ultralytics) – Object detection
+- 📦 **Auto Model Download**  
+  Automatically downloads the YOLOv8 model weights (`yolov8m.pt`) if not already available.
 
-Deep SORT – Object tracking
+---
 
-OpenCV – Video processing
+## 🛠️ Technologies Used
 
-HTML/CSS (Jinja templates) – Frontend rendering
+- Python + Flask
+- OpenCV
+- Ultralytics YOLOv8
+- Deep SORT (Realtime)
+- HTML & Jinja2 templates
+
+---
+
+
+
