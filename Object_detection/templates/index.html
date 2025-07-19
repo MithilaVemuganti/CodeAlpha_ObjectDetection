@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🧠 Object Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #111;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #66bb6a; /* Softer green */
+        }
+        form {
+            background: #222;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(102,187,106,0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="file"], button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #66bb6a;
+            color: #000;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #558b2f;
+        }
+        iframe {
+            margin-top: 30px;
+            width: 640px;
+            height: 480px;
+            border: 2px solid #66bb6a;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>🎯 Real-Time Object Detection & Tracking</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="video">Upload a Video File:</label>
+        <input type="file" name="video" id="video">
+        <button type="submit">Start Detection</button>
+    </form>
+
+    <form action="/webcam" method="post">
+        <button type="submit">Use Webcam</button>
+    </form>
+
+    {% if stream %}
+        <iframe src="{{ stream }}" allowfullscreen></iframe>
+    {% endif %}
+</body>
+</html>
